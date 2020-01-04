@@ -1,0 +1,11 @@
+File structure
+
+- Add all .py to demo_clrs_algorithm
+
+File organization refactoring
+
+- merge module by their use, not by CLRS chapters
+
+Code refactoring
+
+- Don't declare xxx_tree_node to insert to fib_heap, binary_search_tree, red_black_tree

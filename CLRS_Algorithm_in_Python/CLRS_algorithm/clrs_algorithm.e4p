@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Project SYSTEM "Project-5.1.dtd">
+<!-- eric project file for project clrs_algorithm -->
+<!-- Saved: 2017-04-08, 20:48:23 -->
+<!-- Copyright (C) 2017 ,  -->
+<Project version="5.1">
+  <Language>en_US</Language>
+  <Hash>4d581395e518a6305f418bc94b11e2f9159bbfad</Hash>
+  <ProgLanguage mixed="0">Python3</ProgLanguage>
+  <ProjectType>PyQt5</ProjectType>
+  <Description></Description>
+  <Version>0.1</Version>
+  <Author></Author>
+  <Email></Email>
+  <Eol index="-1"/>
+  <Sources>
+    <Source>all_pair_shortest_path.py</Source>
+    <Source>argumenting_data_structures.py</Source>
+    <Source>b_trees.py</Source>
+    <Source>binary_search_tree.py</Source>
+    <Source>computational_geometry.py</Source>
+    <Source>disjoint_set.py</Source>
+    <Source>divide_and_conquer.py</Source>
+    <Source>dynamic_programming.py</Source>
+    <Source>fib_heap.py</Source>
+    <Source>graph_algorithm.py</Source>
+    <Source>hash.py</Source>
+    <Source>heap.py</Source>
+    <Source>huffman.py</Source>
+    <Source>linear_programming.py</Source>
+    <Source>matrix_operation.py</Source>
+    <Source>maximum_flow.py</Source>
+    <Source>mst.py</Source>
+    <Source>multithreaded_algorithm.py</Source>
+    <Source>order_statistics.py</Source>
+    <Source>polynomial_utility.py</Source>
+    <Source>red_black_tree.py</Source>
+    <Source>run_all_ut.py</Source>
+    <Source>single_source_shortest_path.py</Source>
+    <Source>sort.py</Source>
+    <Source>string_matching.py</Source>
+    <Source>utility.py</Source>
+    <Source>veb_tree.py</Source>
+  </Sources>
+  <Forms/>
+  <Translations/>
+  <Resources/>
+  <Interfaces/>
+  <Others/>
+  <Vcs>
+    <VcsType>None</VcsType>
+  </Vcs>
+  <FiletypeAssociations>
+    <FiletypeAssociation pattern="*.idl" type="INTERFACES"/>
+    <FiletypeAssociation pattern="*.py" type="SOURCES"/>
+    <FiletypeAssociation pattern="*.py3" type="SOURCES"/>
+    <FiletypeAssociation pattern="*.pyw" type="SOURCES"/>
+    <FiletypeAssociation pattern="*.pyw3" type="SOURCES"/>
+    <FiletypeAssociation pattern="*.qm" type="TRANSLATIONS"/>
+    <FiletypeAssociation pattern="*.qrc" type="RESOURCES"/>
+    <FiletypeAssociation pattern="*.ts" type="TRANSLATIONS"/>
+    <FiletypeAssociation pattern="*.ui" type="FORMS"/>
+  </FiletypeAssociations>
+</Project>
