@@ -5,6 +5,8 @@
 #include "string.h"
 #include "time.h"
 #include "vector.h"
+#include "list.h"
+#include "stack.h"
 
 void check2(int v);
 void* my_malloc_imp(size_t size, char* file_name, int line_number);

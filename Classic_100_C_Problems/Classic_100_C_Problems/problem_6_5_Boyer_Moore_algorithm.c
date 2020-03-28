@@ -1,5 +1,6 @@
 #include "common.h"
 #include "vector.h"
+#include "list.h"
 
 static void check(int b)
 {
@@ -23,7 +24,7 @@ int naive_string_match(char* s, char* key)
     return -1;
 }
 
-#define digit_count (4)
+#define digit_count (3)
 
 void test_p_6_5_boyer_moore3(char* s, char* key, int current_digit_count)
 {
@@ -76,17 +77,12 @@ void test_p_6_5_boyer_moore()
     test_p_6_5_boyer_moore2(s, 0);
 }
 
-typedef struct linked_list_node {
-    struct linked_list_node* next;
-    int value;
-}linked_list_node;
-
 int p_6_5_boyer_moore(char* s, char* key)
 {
-    vector* index[digit_count];
+    list* index[digit_count];
     for (int i = 0; i < digit_count; i++)
     {
-        index[i] = new_vector();
+        index[i] = new_list();
     }
 
     int key_len = strlen(key);
@@ -94,25 +90,22 @@ int p_6_5_boyer_moore(char* s, char* key)
     for (int i = 0; i < key_len; i++)
     {
         char s2 = key[key_len - 1 - i];
-        vector* v = index[s2 - '0'];
-        linked_list_node* node = my_malloc(sizeof(linked_list_node));
-        node->value = key_len - 1 - i;
-        v->append(v, node);
+        list* l = index[s2 - '0'];
+        l->append(l, (void*)(key_len - 1 - i));
     }
 
     int answer = -1;
     int s_index = key_len - 1;
-    vector* v = index[s[s_index] - '0'];
+    list* l = index[s[s_index] - '0'];
 
     while (s_index < (int)strlen(s))
     {
-        for (int i = 0; i < v->size(v); i++)
+        for (list_node* n = l->head; n != NULL; n = n->next)
         {
-            linked_list_node* node = v->value(v, i);
-            char* s2 = s + s_index - node->value;
+            char* s2 = s + s_index - (int)n->value;
             if (strncmp(s2, key, strlen(key)) == 0)
             {
-                answer = s_index - node->value;
+                answer = s_index - (int)n->value;
                 break;
             }
         }
@@ -121,12 +114,12 @@ int p_6_5_boyer_moore(char* s, char* key)
             break;
 
         s_index += key_len;
-        v = index[s[s_index] - '0'];
+        l = index[s[s_index] - '0'];
     }
 
     for (int i = 0; i < digit_count; i++)
     {
-        delete_vector_and_pointer(index[i]);
+        delete_list(index[i]);
     }
 
     return answer;

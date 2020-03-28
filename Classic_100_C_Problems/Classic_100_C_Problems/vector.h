@@ -3,13 +3,12 @@
 typedef struct vector
 {
     void(*append)(struct vector*, void*);
-    int(*size)(struct vector*);
     void*(*value)(struct vector*, int index);
     void(*remove)(struct vector*, int index);
 
-    int size_;
-    int capacity_;
-    void** content_;
+    int size;
+    int _capacity;
+    void** _content;
 }vector;
 
 vector* new_vector();
