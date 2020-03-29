@@ -6,7 +6,7 @@ typedef struct list {
     struct list_node* (*append)(struct list*, void*);
     struct list_node* (*insert_after)(struct list*, struct list_node*, void*);
     struct list_node* (*insert_before)(struct list*, struct list_node*, void*);
-    void(*delete)(struct list*, struct list_node*);
+    void(*remove)(struct list*, struct list_node*);
     struct list_node* head;
     struct list_node* tail;
 }list;

@@ -33,10 +33,10 @@
     <ClCompile Include="stack.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="TODO.c">
+    <ClCompile Include="problem_6_1_parenthses_matching.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="problem_6_1_parenthses_matching.c">
+    <ClCompile Include="queue.c">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -51,6 +51,12 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="stack.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="todo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="queue.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

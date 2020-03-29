@@ -1,2 +1,10 @@
-﻿  problem_6_1_parenthses_matching.c
+﻿  common.c
+  list.c
+  main.c
+  problem_6_1_parenthses_matching.c
+  problem_6_5_Boyer_Moore_algorithm.c
+  queue.c
+  stack.c
+  vector.c
+  Generating Code...
   Classic_100_C_Problems.vcxproj -> C:\Storage\GitHub\Algorithm\Classic_100_C_problems\Debug\Classic_100_C_Problems.exe

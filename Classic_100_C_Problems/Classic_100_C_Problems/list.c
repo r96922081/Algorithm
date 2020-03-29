@@ -31,7 +31,7 @@ list_node* list_append(list* l, void* value)
     return n;
 }
 
-void list_delete(list* l, list_node* node)
+void list_remove(list* l, list_node* node)
 {
     if (l->head == l->tail && l->head == node)
     {
@@ -108,7 +108,7 @@ list* new_list()
     l->head = NULL;
     l->tail = NULL;
     l->append = list_append;
-    l->delete = list_delete;
+    l->remove = list_remove;
     l->insert_after = list_insert_after;
     l->insert_before = list_insert_before;
     return l;
@@ -156,10 +156,10 @@ void test_list()
     n1 = l->append(l, (void*)1);
     n2 = l->append(l, (void*)21);
     check2(l->head == n1);
-    l->delete(l, n1);
+    l->remove(l, n1);
     my_free(n1);
     check2(l->head == n2);
-    l->delete(l, n2);
+    l->remove(l, n2);
     my_free(n2);
     check2(l->head == NULL);
     delete_list(l);
@@ -170,10 +170,10 @@ void test_list()
     check2(l->tail == n1);
     n2 = l->append(l, (void*)2);
     check2(l->tail == n2);
-    l->delete(l, n2);
+    l->remove(l, n2);
     my_free(n2);
     check2(l->tail == n1);
-    l->delete(l, n1);
+    l->remove(l, n1);
     my_free(n1);
     check2(l->tail == NULL);
     delete_list(l);

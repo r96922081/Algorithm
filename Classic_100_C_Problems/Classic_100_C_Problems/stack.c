@@ -3,49 +3,35 @@
 
 void stack_push(struct stack* s, void* value)
 {
-    if (s->sp == s->_capacity)
-    {
-        void** old_array = s->array;
-        s->_capacity *= 2;
-        s->array = (void**)(my_malloc(sizeof(void*) * s->_capacity));
-        for (int i = 0; i < s->_capacity / 2; i++)
-            s->array[i] = old_array[i];
-        my_free(old_array);
-    }
-
-    s->array[s->sp] = value;
-    s->sp++;
+    s->_list->append(s->_list, value);
 }
 
 void* stack_pop(struct stack* s)
 {
-    if (s->empty(s))
-        raise();
+    void* ret_value = s->_list->tail->value;
+    void* node = s->_list->tail;
 
-    s->sp--;
+    s->_list->remove(s->_list, node);
 
-    return s->array[s->sp];
+    my_free(node);
+
+    return ret_value;
 }
 
 void* stack_top(struct stack* s)
 {
-    if (s->empty(s))
-        raise();
-
-    return s->array[s->sp - 1];
+    return s->_list->tail->value;
 }
 
 int stack_empty(struct stack* s)
 {
-    return s->sp == 0;
+    return s->_list->head == NULL;
 }
 
 stack* new_stack()
 {
     stack* s = (stack*)my_malloc(sizeof(stack));
-    s->sp = 0;
-    s->_capacity = 100;
-    s->array = (void**)(my_malloc(sizeof(void*) * s->_capacity));
+    s->_list = new_list();
     s->push = stack_push;
     s->pop = stack_pop;
     s->top = stack_top;
@@ -56,7 +42,7 @@ stack* new_stack()
 
 void delete_stack(stack* s)
 {
-    my_free(s->array);
+    delete_list(s->_list);
     my_free(s);
 }
 
