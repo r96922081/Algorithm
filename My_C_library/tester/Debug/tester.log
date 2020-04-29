@@ -1,0 +1,3 @@
+﻿  main.c
+main.obj : error LNK2019: unresolved external symbol _test_vector referenced in function _main
+C:\Storage\GitHub\Algorithm\My_C_library\Debug\tester.exe : fatal error LNK1120: 1 unresolved externals

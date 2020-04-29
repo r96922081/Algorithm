@@ -1,9 +1,11 @@
-﻿  common.c
+﻿  bipartile_matching.c
+  common.c
   list.c
   main.c
   problem_6_1_parenthses_matching.c
   problem_6_5_Boyer_Moore_algorithm.c
   queue.c
+  skiplist.c
   stack.c
   vector.c
   Generating Code...

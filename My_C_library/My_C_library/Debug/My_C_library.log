@@ -1,0 +1,8 @@
+﻿  my_c_lib.c
+  list.c
+  queue.c
+  skiplist.c
+  stack.c
+  vector.c
+  Generating Code...
+  My_C_library.vcxproj -> C:\Storage\GitHub\Algorithm\My_C_library\Debug\My_C_library.lib
